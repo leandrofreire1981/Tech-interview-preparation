@@ -14,6 +14,7 @@ Se nos presenta un arreglo de enteros, estos representan el valor de una acción
 Esta ganancia la obtenemos comprando la acción cuando su valor es de 2 y vendiéndola cuando a 11.
 
 ---
+
 ## Solución
 
 ### Primer alternativa: Solución Fuerza Bruta
