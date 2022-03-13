@@ -1,6 +1,6 @@
-function FindNeedle(haystack, needle) {
+function FindNeedle (haystack, needle) {
   // Your code here:
 
 }
 
-module.exports = FindNeedle;
+module.exports = FindNeedle
