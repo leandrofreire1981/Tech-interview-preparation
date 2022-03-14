@@ -7,7 +7,7 @@
 <div align='center' style="display:grid ;justify-content: space-evenly; grid-template-columns: 200px 800px ; padding:10px">
     <div style="margin-left:30px">
         <p>Te preparamos para ingresar al mundo laboral brindándote las herramientas necesarias para conseguir un trabajo.</p>
-        <p>Estos ejercicios te van a ayudar a prepararte para futuras entrevistas tecnicas , aprender o repasar conceptos y como encararlos. Son ejercicios de entrevistas reales.</p>
+        <p>Estos ejercicios te van a ayudar a prepararte para futuras entrevistas técnicas, aprender o repasar conceptos y cómo encararlos. Son ejercicios de entrevistas reales.</p>
     </div>
     <div align='left' style= "border-right: 1px solid currentColor;">
         <h3>Ejercicios en Vivo</h3>
