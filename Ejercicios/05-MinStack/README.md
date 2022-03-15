@@ -1,35 +1,39 @@
-
-
-<p>
-        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
+![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Min Stack
+
 ## Introducción
-Para poder comprender el objetivo de esta actividad necesitamos saber **¿Qué es un stack?** Un stack, también conocido como pila es **LIFO** (Last-In First-Out), es decir, el último en entrar es el primero en salir.       
+
+Para poder comprender el objetivo de esta actividad necesitamos saber **¿Qué es un stack?** Un stack, también conocido como pila es **LIFO** (Last-In First-Out), es decir, el último en entrar es el primero en salir.
 
 En este caso, el ejercicio es implementar un stack que tenga los siguientes métodos:
+
 1. **push(value) :** añadir el elemento, value, al stack.
 2. **pop() :** sacar un elemento del stack.
 3. **min() :** obtener el elemento con el valor mínimo.
 4. **peek():** obtener el elemento que está el en top del Stack
 
-#### Importante
+### Importante
+
 * **TODOS** los métodos mencionados anteriormente deben ser de O(1).
 * Para la resolución del ejercicio no se puede utilizar **ningún** *Array method*
 
+---
+
 ## Solución
+
 ### En palabras
 
 1. Implementar un stack normal
 2. Luego, implementar un stack con un requisito mas > encontrar el mínimo
 
-##### Importante
+#### Importante
 
 **NO PUEDES** guardar el valor mínimo y cada vez que agregas un nuevo valor compararlo **¿POR QUÉ?**
 **( ! ) IDEA:** Tener una estructura separada para guardar el mínimo por cada nodo que se agrega, y cuando sacamos el nodo removemos ese mínimo
 
 ### Primer aproximación
+
 Una primer aproximación para la resolución de este ejercicio es realizar un stack común.
 
 ```javascript
@@ -67,7 +71,8 @@ class Stack{
 ```
 
 ### Extendemos el stack
-Luego, mejoramos la resolución previamente presentada. Extendemos el stack para agregarle el mínimo
+
+Luego, mejoramos la resolución previamente presentada. Extendemos el stack para agregarle el mínimo:
 
 ```javascript
 class MinStack extends Stack{
@@ -103,7 +108,9 @@ class MinStack extends Stack{
 ```
 
 ## Complejidad Espacial
+
 La complejidad espacial del ejercicio sigue siendo de O(n) con la diferencia que ahora almacenamos el doble de la información, O(2n)
 
 ## Código
+
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/JqWw).
