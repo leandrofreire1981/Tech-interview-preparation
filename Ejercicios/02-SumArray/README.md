@@ -1,39 +1,44 @@
-Está
-
-
-<p >
-        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
-
+![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Sum Array
+
 ## Introducción
-En este caso se nos presentan dos elementos: una arreglo **ordenado** de números enteros  y un número entero.    
+
+En este caso se nos presentan dos elementos: una arreglo **ordenado** de números enteros  y un número entero.
+
 El objetivo del ejercicio es encontrar si la combinación de dos números cualesquiera del arreglo, suman el número dado.
 
-#### Ejemplos
-###### Existen dos valores
-**arreglo**: [2,4,5,9]     
-**número**: 9        
-**return**: true
+### Ejemplos
 
-###### No existen dos valores
-**arreglo**: [2,4,5,9]     
-**número**: 12        
-**return**: false
+#### Existen dos valores
+
+- **arreglo**: [2,4,5,9]
+- **número**: 9
+- **return**: true
+
+#### No existen dos valores
+
+- **arreglo**: [2,4,5,9]
+- **número**: 12
+- **return**: false
+
+---
 
 ## Solución
+
 Como todo ejercicio, existen múltiples soluciones para un mismo problema.
 En este caso, analizáremos dos alternativas diferentes, luego determináremos cual es mejor.
 
 ### En palabras
-1. Recorrer el arreglo con dos indices
-2. Chequear si la suma de ambas posiciones da el valor pasado por parámetro
-  1. Si da, hemos terminado. Encontramos los valores buscados
-  2. Si no, seguimos avanzando
-3. Si uno de los indices llego al final, hemos finalizado el recorrido y no existen dos valores en el arreglo que logren la suma esperada
+
+1. Recorrer el arreglo con dos indices.
+2. Chequear si la suma de ambas posiciones da el valor pasado por parámetro.
+    1. Si da, hemos terminado. Encontramos los valores buscados.
+    2. Si no, seguimos avanzando.
+3. Si uno de los indices llego al final, hemos finalizado el recorrido y no existen dos valores en el arreglo que logren la suma esperada.
 
 ### Primer alternativa: Solución naive
+
 ```javascript
 functionsumArray (arr, n) {
     // Itero sobre el arreglo
@@ -54,6 +59,7 @@ Complejidad Temporal | Complejidad Espacial
 O(n^2)|O(1)
 
 ### Segunda alternativa: Mejor solución
+
 ```javascript
 function sumArray2 (arr, n) {
     // Creo un puntero para el principio y el final
@@ -80,4 +86,5 @@ Complejidad Temporal | Complejidad Espacial
 O(n)|O(1)
 
 ## Código
+
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/Jh9N/0).

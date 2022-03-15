@@ -44,8 +44,8 @@ Para la resolución de este ejercicio no se pueden utilizar los métodos **index
 
 ### Primer Alternativa
 
-Ahora si, busquemos la forma de traducir lo que ya dijimos en palabras a código.
-Ademas, debemos evaluar la complejidad en tiempo y espacio.
+Ahora sí, busquemos la forma de traducir lo que ya dijimos en palabras a código.
+Además, debemos evaluar la complejidad en tiempo y espacio.
 
 ```javascript
 const findNeedle = (haystack, needle) => {

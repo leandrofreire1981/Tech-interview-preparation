@@ -1,37 +1,40 @@
-
-<p>
-        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
-
+![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Multi-Dimensional SumArray
+
 ## Introducción
-Ya trabajamos con arreglos de una unica dimension, ahora subiremos un escalón e iremos por arreglos de dos dimensiones, es decir, un arreglo de arreglos de enteros.
+
+Ya trabajamos con arreglos de una única dimensión, ahora subiremos un escalón e iremos por arreglos de dos dimensiones, es decir, un arreglo de arreglos de enteros.
+
 En este caso, el objetivo es encontrar la suma de todos los elementos del arreglo.
 
-#### Ejemplos
-**mdArray**: [1,2,3,4]    
-**output**:  10
+### Ejemplos
 
-**mdArraySum**: [ [2,4] , [1], [4,2,1] ]  
-**output**:  14
+- **mdArray**: [1,2,3,4]  |  **output**:  10
 
-**mdArraySum**: [ 2, [3,4], 5, [-3, [6 , [ 4,5 ] ] ] ]   
-**output**:  26
+- **mdArraySum**: [ [2,4] , [1], [4,2,1] ]  |  **output**:  14
+
+- **mdArraySum**: [ 2, [3,4], 5, [-3, [6 , [ 4,5 ] ] ] ]  |  **output**:  26
+
+---
 
 ## Solución
+
 ### En palabras
+
 Algunas consideraciones a tener en cuenta antes de implementar una solución.
 
-1. La suma inicial es cero
-2. Chequea cada elemento en el arreglo
-    1. Si no es un arreglo agrégalo a la suma
-    2. Si es un arreglo agrega la suma de todos sus elementos a la suma
-3. Devuelve el total
+1. La suma inicial es cero.
+2. Chequea cada elemento en el arreglo.
+    1. Si no es un arreglo agrégalo a la suma.
+    2. Si es un arreglo agrega la suma de todos sus elementos a la suma.
+3. Devuelve el total.
 
 ### Primer Alternativa
+
 Podemos empezar a implementar la solución, pero antes tenemos que resolver una pregunta:
-###### ¿Cómo podemos calcular la suma en los elementos de un sub-arreglo de un sub-arreglo? La respuesta es ***RECURSIÓN***
+
+#### ¿Cómo podemos calcular la suma en los elementos de un sub-arreglo de un sub-arreglo? La respuesta es ***RECURSIÓN***
 
 ```javascript
 const mdArraySum = (arr) => {
@@ -48,6 +51,7 @@ const mdArraySum = (arr) => {
     return sum;
 }
 ```
+
 Considerando que **m es la cantidad de elementos en todos los arreglos** y **m el nivel máximo de profundidad** obtenemos los siguientes ordenes de complejidad.
 
 Complejidad Temporal | Complejidad Espacial
@@ -55,6 +59,7 @@ Complejidad Temporal | Complejidad Espacial
 O(n)|O(m)
 
 ### Segunda alternativa
+
 Veamos una solución one-liner.
 
 ```javascript
@@ -63,4 +68,5 @@ arr.reduce((total, elem) => total + (Array.isArray(elem) ? mdArraySum2(elem) : e
 ```
 
 ## Código
+
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/Jl9b).

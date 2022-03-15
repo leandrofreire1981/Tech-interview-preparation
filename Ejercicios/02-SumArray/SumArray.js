@@ -1,6 +1,6 @@
-function SumArray(arr, n) {
+function SumArray (arr, n) {
   // Your code here:
 
 }
 
-module.exports = SumArray;
+module.exports = SumArray
