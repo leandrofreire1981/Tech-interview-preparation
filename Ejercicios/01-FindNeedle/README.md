@@ -26,7 +26,7 @@ En este caso, como el needle no se encuentra en el haystack el valor de salida e
 
 #### IMPORTANTE
 
-Para la resolución de este ejercicio no se puede utilizar la función preexistente: **indexOf( )**
+Para la resolución de este ejercicio no se pueden utilizar los métodos **indexOf( )** ni **includes**
 
 ---
 
