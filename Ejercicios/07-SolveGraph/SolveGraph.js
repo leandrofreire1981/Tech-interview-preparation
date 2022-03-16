@@ -1,6 +1,6 @@
-function SolveGraph(graph, start, end) {
+function SolveGraph (graph, start, end) {
   // Your code here:
 
 }
 
-module.exports = SolveGraph;
+module.exports = SolveGraph
