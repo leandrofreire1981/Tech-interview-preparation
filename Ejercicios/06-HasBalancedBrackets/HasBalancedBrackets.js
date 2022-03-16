@@ -1,6 +1,6 @@
-function HasBalancedBrackets(string) {
+function HasBalancedBrackets (string) {
   // Your code here:
 
 }
 
-module.exports = HasBalancedBrackets;
+module.exports = HasBalancedBrackets

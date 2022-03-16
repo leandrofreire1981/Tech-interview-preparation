@@ -1,44 +1,45 @@
-
-
-<p>
-        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
-
+![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Has Balance Brackets
+
 ## Introducción
-Crear un bracket validator. La idea es que chequee que los brackets estén balanceados correctamente.    
+
+Crear un bracket validator. La idea es que chequee que los brackets estén balanceados correctamente.
 
 Los brackets válidos son los siguientes:  **[ ] ( ) { }**
 
 ### Ejemplos
 
-**input:** "{ [ ] ( ) }"    
+**input:** "{ [ ] ( ) }"
 **output:** true
 
-**input:** "{ [ ( ] ) }"   
+**input:** "{ [ ( ] ) }"
 **output:** false
 
-**input:** "{ [ }"   
+**input:** "{ [ }"
 **output:** false
 
-**input:** "{ [ ( [ { ( )[ ]{ } } ] ) ] }"   
+**input:** "{ [ [ [ { ( ]( ){ } } ] ) ] }"
 **output:** true
+
+---
 
 ## Solución
+
 ### En Palabras
 
 1. Tienes:
-  *  **"opening"** - **( { [** - y,
-  * **"closing"** - **) } ]** - brackets.
+    * **"opening"** - **( { [** - y,
+    * **"closing"** - **) } ]** - brackets.
 2. Cada closing bracket tiene que corresponder con la opening bracket mas cercano que empareje.
 3. Cada opening y closing bracket tienen que estar en pareja.
 
 Entonces tienen que ir trackeando los opening brackets y fijarse si cuando encontramos una closing bracket, matchea con la opening bracket mas cercana
 
-##### ¿Qué  estructura de datos podemos utilizar para esto?
+#### ¿Qué  estructura de datos podemos utilizar para esto?
 
 ### Solución posible
+
 ```javascript
 const hasBalancedBrackets = (string) => {
     //  Tenemos un diccionario para chequear las opening brackets con sus closing brackets
@@ -66,8 +67,10 @@ const hasBalancedBrackets = (string) => {
 ```
 
 ## Conclusión
+
 * Las estructuras de datos pueden ser muy útiles aunque... no estemos explícitamente creando una.
 * Podemos usar arreglos y métodos del arreglo para crear un arreglo que se comporte como un stack/queue
 
 ## Código
+
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/JsIz).
