@@ -16,6 +16,9 @@ Los brackets válidos son los siguientes:  **[ ] ( ) { }**
 **input:** "{ [ ( ] ) }"
 **output:** false
 
+**input:** "{ [ ] ) }"
+**output:** false
+
 **input:** "{ [ }"
 **output:** false
 
