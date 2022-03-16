@@ -19,7 +19,7 @@ Los brackets válidos son los siguientes:  **[ ] ( ) { }**
 **input:** "{ [ }"
 **output:** false
 
-**input:** "{ [ [ [ { ( ]( ){ } } ] ) ] }"
+**input:** "{ [ ( [ { ( )[ ]{ } } ] ) ] }"
 **output:** true
 
 ---
