@@ -1,28 +1,31 @@
-
-<p>
-        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
-
+![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Clock minute adder
+
 ## Introducción
+
 Dada una hora en string en **formato HH:MM**, y un número de minutos.
 Devolver la nueva hora pasados esos minutos.
 
-##### IMPORTANTE
+### IMPORTANTE
+
 El reloj es de 12 horas y tiene que devolverse en el formato HH:MM. Recuerda que no existen las 00hs.
 
-##### Ejemplos:
-clockMinuteAdder (**'09:00', 20**);   
-**ouput**: '09:20'    
+### Ejemplos
 
-clockMinuteAdder (**'01:30', 30**);    
-**ouput**: '02:00'     
+clockMinuteAdder (**'09:00', 20**);
+**ouput**: '09:20'
 
-clockMinuteAdder (**'12:05', 100**);      
+clockMinuteAdder (**'01:30', 30**);
+**ouput**: '02:00'
+
+clockMinuteAdder (**'12:05', 100**);
 **ouput**: '01:45'
 
+---
+
 ## Solución
+
 ```javascript
 const clockMinuteAdder = (time, minutesToAdd) => {
     // Separo las horas y los minutos
@@ -46,4 +49,5 @@ const clockMinuteAdder = (time, minutesToAdd) => {
 ```
 
 ## Código
+
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/KEvy/3).
