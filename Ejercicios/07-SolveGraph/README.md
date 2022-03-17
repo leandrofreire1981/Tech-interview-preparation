@@ -1,17 +1,20 @@
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
-
 # Solve Graph
+
 ## Introducción
+
 Un grafo/graph es un set de vertices conectados entre ellos por aristas.
 
 ### Undirected vs. Directed Graphs
+
 <p>
 <img src='../../images/graph.png' </img>
 </p>
 
 ### ¿Qué hay que hacer?
-Escribe una función que determine si existe un path entre dos vertices de un graph.   
+
+Escribe una función que determine si existe un path entre dos vertices de un graph.
 
 El graph será representado como un objeto. Cada key representa un vértice. El valor, todos los vertices que pueden ser alcanzados.
 
@@ -22,10 +25,12 @@ El graph, será un *'directed graph'*.
 Como observamos, en la imagen de la izquierda el nodo 'a' se conecta con el nodo 'b', el nodo 'b' con el nodo 'c' y 'd' y por último, el nodo 'c' con el nodo 'd'.
 
 ## Solución
+
 ### En palabras
+
 - La solución puede ser un algoritmo **Breadth-First** o **Depth-First**
 - Pero... los graphs pueden ser cíclicos
-  -  Si empezamos recorriendo el vértice A, eventualmente vamos a llegar al vértice R que apunta devuelta al A.
+  - Si empezamos recorriendo el vértice A, eventualmente vamos a llegar al vértice R que apunta devuelta al A.
 
 ```javascript
 {
@@ -35,6 +40,7 @@ Como observamos, en la imagen de la izquierda el nodo 'a' se conecta con el nodo
     s: [ ]
 }
 ```
+
 - ¿El problema? Un algoritmo normal de BFS/DFS terminaría en un **loop infinito**.
 - Por lo tanto, tu algoritmo tiene que traquear todos los vertices que visitó
 - Si un vértice ha sido visitado sabemos que no tenemos que recorrer sus aristas por segunda vez
@@ -47,7 +53,6 @@ Grafo utilizado para la resolución:
 <p align="center">
   <img src="../../images/graph-exercise.png" />
 </p>
-
 
 ```javascript
 const graph = {
@@ -83,8 +88,8 @@ Complejidad Temporal | Complejidad Espacial
 --|--
 O(n)|O(n)
 
-
 ### Solución breadth-first approach
+
 ```javascript
 const graph = {
 a: ['c'],
@@ -114,9 +119,11 @@ function solveGraphBFS(graph, start, end, visited = {}, queue = []) {
 solveGraphBFS(graph, 'a', 'r'); // true
 solveGraphBFS(graph, 's', 'b'); // false
 ```
+
 Complejidad Temporal | Complejidad Espacial
 --|--
 O(n)|O(n)
 
 ## Código
+
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/JuS9).
