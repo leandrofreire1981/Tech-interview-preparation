@@ -1,6 +1,6 @@
-function DecimalToBynary(num) {
+function DecimalToBynary (num) {
   // Your code here:
 
 }
 
-module.exports = DecimalToBynary;
+module.exports = DecimalToBynary
