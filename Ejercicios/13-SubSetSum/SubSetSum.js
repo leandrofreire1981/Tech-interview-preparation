@@ -1,6 +1,6 @@
-function subsetSum(nums, n) {
+function subsetSum (nums, n) {
   // Your code here:
 
 }
 
-module.exports = subsetSum;
+module.exports = subsetSum
