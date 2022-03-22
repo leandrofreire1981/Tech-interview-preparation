@@ -63,6 +63,7 @@ O(n+m)|O(n)
 ### Para un arreglo desordenado
 
 ```javascript
+// Con objeto
 function intersection3(arr1, arr2) {
     const hashMap = arr1.reduce((memo, num) => {
         memo[num] = true;
@@ -70,13 +71,27 @@ function intersection3(arr1, arr2) {
     }, {});
     return arr2.filter(num => hashMap[num]);
 }
+
+// Con Array Asociativo
+function intersection4(arr1, arr2) {
+  const arrayAsociativo = []
+  for (const num of arr1) arrayAsociativo[num] = true
+  return arr2.filter(num2 => arrayAsociativo[num2] )
+}
+
+// Con MAP de ES6
+function intersection5(arr1, arr2) {
+  const hashMap = new Map()
+  for (const num of arr1) hashMap.set(num, true)
+  return arr2.filter(num => hashMap.get(num))
+}
 ```
 
 Complejidad Temporal | Complejidad Espacial
 --|--
 O(n+m)|O(n)
 
-Como verán, la complejidad espacial sigue siendo O(n) **pero estamos creando n de espacio extra por el HashMap**.
+Como verán, la complejidad espacial sigue siendo O(n) **pero estamos creando n de espacio extra por el HashMap/Array**.
 
 ## Código
 
