@@ -1,47 +1,51 @@
-
-
-
-<p>
-        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
-
+![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Subset Sum
+
 ## Introducción
+
 Dada una suma objetiva, 'target' y un arreglo de números positivos:
+
 * Devolvé **true** si cualquier combinación de números en el arreglo suma el target.
 * Devolvé **false** si los números no pueden ser usados para sumar el target  
 
 ##### IMPORTANTE
+
 Cada número en el arreglo solo se puede usar una vez.
 
-#### Ejemplos:
-subsetSum( **[1,10,5,3], 9** );    
+#### Ejemplos
+
+subsetSum( **[1,10,5,3], 9** );
 **output**: true <= 1 + 5 + 3
 
-subsetSum( **[1,10,5,3], 19** );     
+subsetSum( **[1,10,5,3], 19** );
 **output**:true <= add all 4
 
-subsetSum( **[1,10,5,3], 17** );      
+subsetSum( **[1,10,5,3], 17** );
 **output**:false
 
-subsetSum( **[1,10,5,3], 2** );      
+subsetSum( **[1,10,5,3], 2** );
 **output**:false
 
-subsetSum( **[1,10,5,3], 10** );      
+subsetSum( **[1,10,5,3], 10** );
 **output**:true <= 10 + 0 = 10
 
 ## Solución
+
 ### Primer alternativa: Iterativa
+
 #### En palabras
+
 Construir un arreglo de todas las sumas posibles:
+
 1. Inicializa el arreglo de sumas con 0
 2. Itera sobre el arreglo de números
 3. Itera sobre el arreglo de sumas, chequeando si el elemento actual + la suma es igual al target
 4. Si la nueva suma es menor que el target
 guardalo en el arreglo de sumas
 
-##### Ejemplo:
+##### Ejemplo
+
 ```javascript
 subsetSum(17, [1, 10, 5, 3])
 => set de posibles sumas: [0]
@@ -54,6 +58,7 @@ subsetSum(17, [1, 10, 5, 3])
 ```
 
 #### En código
+
 ```javascript
 const subsetSum = (nums, target) => {
     const sums = [0];
@@ -69,17 +74,20 @@ const subsetSum = (nums, target) => {
 ```
 
 ### Segunda alternativa: Optimización
+
 Con la alternativa anterior... Podemos estar agregando valores repetidos al arreglo que nos dan el mismo resultado
 
 ##### Ejemplo
+
 ```javascript
 => 1,2,3,4,5,6     
 => 0,1,2,3,3,4,5,6,4,5,6,7
 ```
 
-###### ¿Como podemos evitar agregar elementos repetidos sin agregar complejidad? Con UN SET.
+###### ¿Como podemos evitar agregar elementos repetidos sin agregar complejidad? Con UN SET
 
 #### Solución Iterativa con Set
+
 ```javascript
 const subsetSumSet = (nums, target) => {
     const sums = new Set([0]);
@@ -95,7 +103,9 @@ const subsetSumSet = (nums, target) => {
 ```
 
 ### Tercer Alternativa: Solución Recursiva
+
 #### En palabras
+
 También podemos encarar este problema recursivamente.
 
 Por cada elemento del arreglo solo nos importa:
@@ -105,6 +115,7 @@ Por cada elemento del arreglo solo nos importa:
 3. Entonces... por cada elemento, hagamos una llamada recursiva que chequeé estas dos cosas
 
 #### En código
+
 ```javascript
 const subsetSumRec = (nums, target, index = 0) => {
     if (target === 0) return true;
@@ -116,10 +127,10 @@ const subsetSumRec = (nums, target, index = 0) => {
 }
 ```
 
-###### Pero de nuevo estamos creando muchos caminos que se repiten...
-
+###### Pero de nuevo estamos creando muchos caminos que se repiten
 
 #### Optimización de la Solución Recursiva
+
 Con memoization podemos guardar los números que ya tuvimos un resultado y no tener que volver a procesarlos.
 
 ```javascript
@@ -135,7 +146,9 @@ const subsetSumRecMemo = (nums, target, index = 0, memo = {}) => {
     return whenExcluded || whenIncluded ;
 }
 ```
+
 ## Complejidad
+
 Todas las soluciones son de complejidad:
 
 Complejidad Temporal | Complejidad Espacial
@@ -145,4 +158,5 @@ O(2^n)|O(2^n)
 Aunque algunas sean mas óptimas que otras, en el peor de los casos, hay que recorrer todo el arreglo, y no tener ninguna suma repetida.
 
 ## Código
+
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/KM8S/4).
