@@ -38,4 +38,8 @@ xdescribe('SpyOn', function () {
     expect(adderSpy.returned(6)).to.equal(false)
     expect(adderSpy.returned(7)).to.equal(false)
   })
+  it('the function should return the correct result with variable quantity of arguments ', function () {
+    expect(adderSpy(5, 6)).to.equal(11)
+    expect(adderSpy(5, 6, 9)).to.equal(20)
+  })
 })
