@@ -23,9 +23,8 @@
 - [09-SpyOn](Ejercicios/15-SpyOn/)
 - [10-Curry](Ejercicios/16-Curry/)
 
-        
 ### Homework
-        
+
 - [01-SumArray](/Ejercicios/02-SumArray/)
 - [02-MultidimensionalSumArray](/Ejercicios/04-MultidimensionalSumArray)
 - [03-MinStack](Ejercicios/05-MinStack/)
@@ -33,6 +32,7 @@
 - [05-LongestIncreasingSubSequence](Ejercicios/14-LongestIncreasingSubSequence/)
 
 </div>
-        
-###  [Dejanos tu Feedback:](https://airtable.com/shr99TOaHwiVDO8gk)
+
+### [Dejanos tu Feedback:](https://airtable.com/shr99TOaHwiVDO8gk)
+
 [<img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>](https://airtable.com/shr99TOaHwiVDO8gk)
