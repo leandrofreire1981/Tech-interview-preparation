@@ -9,7 +9,7 @@ Dada una suma objetiva, 'target' y un arreglo de números positivos:
 * Devolvé **true** si cualquier combinación de números en el arreglo suma el target.
 * Devolvé **false** si los números no pueden ser usados para sumar el target  
 
-##### IMPORTANTE
+### IMPORTANTE
 
 Cada número en el arreglo solo se puede usar una vez.
 
@@ -77,14 +77,14 @@ const subsetSum = (nums, target) => {
 
 Con la alternativa anterior... Podemos estar agregando valores repetidos al arreglo que nos dan el mismo resultado
 
-##### Ejemplo
+#### Ejemplo
 
 ```javascript
 => 1,2,3,4,5,6     
 => 0,1,2,3,3,4,5,6,4,5,6,7
 ```
 
-###### ¿Como podemos evitar agregar elementos repetidos sin agregar complejidad? Con UN SET
+##### ¿Como podemos evitar agregar elementos repetidos sin agregar complejidad? Con UN SET
 
 #### Solución Iterativa con Set
 
@@ -127,7 +127,7 @@ const subsetSumRec = (nums, target, index = 0) => {
 }
 ```
 
-###### Pero de nuevo estamos creando muchos caminos que se repiten
+##### Pero de nuevo estamos creando muchos caminos que se repiten
 
 #### Optimización de la Solución Recursiva
 
