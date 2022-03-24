@@ -39,7 +39,11 @@ xdescribe('SpyOn', function () {
     expect(adderSpy.returned(7)).to.equal(false)
   })
   it('the function should return the correct result with variable quantity of arguments ', function () {
+    const adder2 = (n1, n2, n3) => {
+      return n1 + n2 + n3
+    }
+    const adderSpy2 = spy(adder2)
     expect(adderSpy(5, 6)).to.equal(11)
-    expect(adderSpy(5, 6, 9)).to.equal(20)
+    expect(adderSpy2(5, 6, 9)).to.equal(20)
   })
 })
