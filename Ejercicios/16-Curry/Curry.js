@@ -1,6 +1,6 @@
-function curry(fn) {
+function curry (fn) {
   // Your code here:
 
 }
 
-module.exports = curry;
+module.exports = curry
