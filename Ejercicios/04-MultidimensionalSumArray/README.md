@@ -16,6 +16,10 @@ En este caso, el objetivo es encontrar la suma de todos los elementos del arregl
 
 - **mdArraySum**: [ 2, [3,4], 5, [-3, [6 , [ 4,5 ] ] ] ]  |  **output**:  26
 
+#### IMPORTANTE
+
+Para la resolución de este ejercicio no se puede utilizar el método **Array.flat()**
+
 ---
 
 ## Solución
