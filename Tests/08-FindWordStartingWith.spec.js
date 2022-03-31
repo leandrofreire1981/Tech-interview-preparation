@@ -16,6 +16,7 @@ xdescribe('FindWordStartingWith', function () {
   it('should return an empty array if the word is not in the book', () => {
     expect(FindWordStartingWith(book, 'franco')).to.deep.equal([])
   })
+  it('should be case insensitive & works for the first word', () => {
     expect(FindWordStartingWith(book, 'era')).to.deep.equal([0, 39])
   })
 })
