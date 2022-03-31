@@ -1,6 +1,6 @@
-function longestIncreasingSubsequence(nums) {
+function longestIncreasingSubsequence (nums) {
   // Your code here:
 
 }
 
-module.exports = longestIncreasingSubsequence;
+module.exports = longestIncreasingSubsequence
