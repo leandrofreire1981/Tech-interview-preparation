@@ -1,6 +1,6 @@
-function FindWordStartingWith(book, query) {
+function FindWordStartingWith (book, query) {
   // Your code here:
 
 }
 
-module.exports = FindWordStartingWith;
+module.exports = FindWordStartingWith
