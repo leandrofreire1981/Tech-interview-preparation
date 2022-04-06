@@ -8,9 +8,7 @@ Un grafo/graph es un set de vertices conectados entre ellos por aristas.
 
 ### Undirected vs. Directed Graphs
 
-<p>
-<img src='../../images/graph.png' </img>
-</p>
+![Graph](../../images/graph.png)
 
 ### ¿Qué hay que hacer?
 
@@ -20,7 +18,7 @@ El graph será representado como un objeto. Cada key representa un vértice. El 
 
 El graph, será un *'directed graph'*.
 
-<p><img src='../../images/graph 2.png'</img></p>
+![Graph2](../../images/graph2.png)
 
 Como observamos, en la imagen de la izquierda el nodo 'a' se conecta con el nodo 'b', el nodo 'b' con el nodo 'c' y 'd' y por último, el nodo 'c' con el nodo 'd'.
 
@@ -50,9 +48,7 @@ Como observamos, en la imagen de la izquierda el nodo 'a' se conecta con el nodo
 
 Grafo utilizado para la resolución:
 
-<p align="center">
-  <img src="../../images/graph-exercise.png" />
-</p>
+![GraphExcercise](../../images/graph-exercise.png)
 
 ```javascript
 const graph = {
