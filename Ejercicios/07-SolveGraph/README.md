@@ -10,7 +10,6 @@ Un grafo/graph es un set de vertices conectados entre ellos por aristas.
 
 ![Graph](../../images/graph.png)
 
-
 ### ¿Qué hay que hacer?
 
 Escribe una función que determine si existe un path entre dos vertices de un graph.
@@ -21,16 +20,18 @@ El graph, será un *'directed graph'*.
 
 ![Graph2](../../images/graph2.png)
 
+Y lo representamos con un objeto:
+
 ```js
 {
-  a : ['b'],
-  b : ['c', 'd'],
-  c : ['d']
-  d : []  
+  a: ['b'],
+  b: ['c', 'd'],
+  c: ['d']
+  d: []  
 }
 ```
 
-Como observamos, en la imagen de la izquierda el nodo 'a' se conecta con el nodo 'b', el nodo 'b' con el nodo 'c' y 'd' y por último, el nodo 'c' con el nodo 'd'.
+Como observamos, el nodo 'a' se conecta con el nodo 'b', el nodo 'b' con el nodo 'c' y 'd' y por último, el nodo 'c' con el nodo 'd'.
 
 ## Solución
 
@@ -40,12 +41,12 @@ Como observamos, en la imagen de la izquierda el nodo 'a' se conecta con el nodo
 - Pero... los graphs pueden ser cíclicos
   - Si empezamos recorriendo el vértice A, eventualmente vamos a llegar al vértice R que apunta devuelta al A.
 
-```javascript
+```js
 {
-    a: ['c'],
-    c: ['s', 'r'],
-    r: ['a'],
-    s: [ ]
+  a: ['c'],
+  c: ['s', 'r'],
+  r: ['a'],
+  s: [ ]
 }
 ```
 
@@ -62,14 +63,14 @@ Grafo utilizado para la resolución:
 
 ```javascript
 const graph = {
-a: ['c'],
-b: ['c'],
-c: ['s', 'r'],
-d: ['a'],
-s: ['a', 'c'],
-r: ['d'],
-z: ['z']
-};
+  a: ['c'],
+  b: ['c'],
+  c: ['s', 'r'],
+  d: ['a'],
+  s: ['a', 'c'],
+  r: ['d'],
+  z: ['z']
+}
 function solveGraphDFS(graph, start, end, visited = {}) {
     // nos fijamos si ya visitamos este vértice
     if (visited[start]) return false;
@@ -98,13 +99,13 @@ O(n)|O(n)
 
 ```javascript
 const graph = {
-a: ['c'],
-b: ['c'],
-c: ['s', 'r'],
-d: ['a'],
-s: ['a', 'c'],
-r: ['d'],
-z: ['z']
+  a: ['c'],
+  b: ['c'],
+  c: ['s', 'r'],
+  d: ['a'],
+  s: ['a', 'c'],
+  r: ['d'],
+  z: ['z']
 };
 
 function solveGraphBFS(graph, start, end, visited = {}, queue = []) {
