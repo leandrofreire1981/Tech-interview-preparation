@@ -1,16 +1,15 @@
-
-
-<p>
-        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
-
+![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 # Decimal to Binary
+
 ## Introducción
+
 En el caso anterior transformábamos números binarios en decimales. En este caso hay que **hacer una función que tome un numero decimal y lo devuelva en binario**
 
 ## Solución
+
 ### En palabras
+
 1. Tomá el número y sacá su modulo en 2
 2. Guardá el resultado en un string
 3. Dividí el número por 2 y redondealo para abajo
@@ -18,7 +17,8 @@ En el caso anterior transformábamos números binarios en decimales. En este cas
 5. Devuelve el string
 
 ### Primer alternativa
-```javascript
+
+```js
 const decimalToBinary = (num) => {
     let binary = '';
     while(num) {
@@ -28,9 +28,12 @@ const decimalToBinary = (num) => {
     return binary
 }
 ```
+
 ### Segunda alternativa
+
 En este caso, se propone una **solución recursiva**.
-```javascript
+
+```js
 const decimalToBinaryRec = (num) => {
     if (num) {
         return decimalToBinaryRec(Math.floor(num / 2)) + num % 2
@@ -38,5 +41,7 @@ const decimalToBinaryRec = (num) => {
     return '';
 }
 ```
+
 ## Código
+
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/KDLz/1).
