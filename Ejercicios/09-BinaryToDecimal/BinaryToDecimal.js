@@ -1,6 +1,6 @@
-function BinaryToDecimal(binary) {
+function BinaryToDecimal (binary) {
   // Your code here:
 
 }
 
-module.exports = BinaryToDecimal;
+module.exports = BinaryToDecimal
