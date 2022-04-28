@@ -4,7 +4,7 @@
 
 ## Introducción
 
-En el caso anterior transformábamos números binarios en decimales. En este caso hay que **hacer una función que tome un numero decimal y lo devuelva en binario**
+En el caso anterior transformábamos números binarios en decimales. En este caso hay que **hacer una función que tome un número decimal y lo devuelva en binario**
 
 ## Solución
 
