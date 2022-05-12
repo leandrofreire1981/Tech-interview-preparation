@@ -13,7 +13,7 @@ El libro vendrá con dos cosas: un id y un texto. **La búsqueda tiene que ser c
 ```javascript
 const book = {
     id: 1,
-    text: 'Erase una vez un libro de palabras que era un poco aburrido pero tenia muchas'
+    text: 'Erase una vez un libro de palabras que era un poco aburrido pero tenia mucho aunque algunas palabras locas'
 }
 ```
 
