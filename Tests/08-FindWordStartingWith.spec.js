@@ -5,7 +5,7 @@ xdescribe('FindWordStartingWith', function () {
   const book = {
     id: 1,
     text:
-      'Erase una vez un libro de palabras que era un poco aburrido pero tenia mucho aunque algunas palabras locas aaadeaa'
+      'Erase una vez un libro de palabras que era un poco aburrido pero tenia mucho aunque algunas palabras locas'
   }
   it("should return all the indexes of words starting with 'de'", () => {
     expect(FindWordStartingWith(book, 'de')).to.deep.equal([23])
