@@ -17,9 +17,11 @@ Implementa tu propia versión de la función **spyOn** que hace lo siguiente:
 ### Ejemplos
 
 ```javascript
-function adder(n1, n2) { return n1 + n2; }
+function adder(n1, n2) {
+  return n1 + n2;
+}
 
-const adderSpy = spyOn( adder );
+const adderSpy = spyOn(adder);
 
 adderSpy.getCallCount(); // 0
 
@@ -33,28 +35,3 @@ adderSpy.wasCalledWith(0); // false
 adderSpy.returned(6); // true
 adderSpy.returned(9); // false
 ```
-
-## Solución
-
-```javascript
-const spyOn = (fn) => {
-    let callCount = 0;
-    const calledWith = new Set();
-    const returns = new Set();
-    const spy = (...args) => {
-        callCount += 1;
-        args.forEach(arg => calledWith.add(arg));
-        const result = fn(...args);
-        returns.add(result);
-        return result;
-    }
-    spy.getCallCount = () => callCount;
-    spy.wasCalledWith = (val) => calledWith.has(val);
-    spy.returned = (val) => returns.has(val);
-    return spy;
-}
-```
-
-## Código
-
-Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/KUom).
