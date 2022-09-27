@@ -34,10 +34,10 @@ function HasBalancedBrackets (string) {
         else {
           return false
         }
-       }
-  } 
+      }
+  }  
   if(stack.size() === 0) 
-    return true
+    return true 
   else 
     return false
 }
