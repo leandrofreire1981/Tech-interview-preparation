@@ -35,7 +35,7 @@ function HasBalancedBrackets (string) {
           return false
         }
        }
-  }
+  } 
   if(stack.size() === 0) 
     return true
   else 

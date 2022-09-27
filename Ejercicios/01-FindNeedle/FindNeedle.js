@@ -5,8 +5,7 @@ function FindNeedle(haystack, needle) {
         if(a === needle)
             return i        
     }
-    return -1
-    
+return -1    
 }
 
 //console.log(FindNeedle("react-redux", "redux")); //(6)

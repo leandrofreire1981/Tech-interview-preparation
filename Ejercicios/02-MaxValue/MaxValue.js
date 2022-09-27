@@ -6,5 +6,5 @@ function MaxValue (shares) {
   return max - min
 }
 
-//console.log(MaxValue([4, 3, 2, 5, 11]))
+console.log(MaxValue([4, 3, 2, 5, 11]))
 module.exports = MaxValue
